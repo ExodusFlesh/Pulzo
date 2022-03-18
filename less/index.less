@@ -1,0 +1,181 @@
+//images
+
+@images: "https://d2yoo3qu6vrk5d.cloudfront.net/pulzo-lite/jsons/rushbet/native";
+
+//colors
+
+@colortxt: white;
+@colorButtons: #022248;
+@colorPrimary: #e6b822;
+@fontWeight: bold;
+@dark: black;
+
+// fonts
+
+@fontSizeButton: 1em;
+
+// Resolutions
+
+@mobile:     ~"(max-width: 767px)";
+@tablet:     ~"only screen and (min-width: 760px) and (max-width: 975px)";
+@desktop:     ~"only screen and (min-width: 975px) and (max-width: 4000px)";
+
+// standarts
+
+@button: {
+    padding: 15px 50px 25px 50px;
+    border-radius: 30px;
+    font-size: @fontSizeButton;
+    font-weight: @fontWeight;
+    border: none;
+}
+
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+} body {
+    background: url("@{images}/BG-DESKTOP.jpg");
+    background-repeat: no-repeat;
+    background-size:cover; 
+    text-decoration: none;
+}
+
+
+.container{
+    display: grid;
+    grid-gap:20px;
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+    grid-template-columns: 400px;
+    grid-template-areas: 
+        "containerA "
+        "containerB"
+        "containerC";
+    @media @tablet{
+        justify-content:space-evenly;
+        grid-template-columns: 450px 400px;
+        grid-template-areas: 
+                "containerA containerB"
+                "containerC containerC";
+    }
+    @media @desktop {
+        justify-content:space-between;
+        grid-template-columns: 450px 400px 28rem;
+        grid-template-areas: 
+                "containerA containerB"
+                "containerC containerC";
+    }
+}
+
+
+.containerA{
+    grid-area: containerA;
+
+    .banner-rushbet{
+    text-align: left;
+    margin-left: 2rem;
+    }
+
+    h1{
+        color: @colorButtons;
+    } h2 , h5{
+        color:@colortxt;
+    }
+
+    .teams{
+    display: flex;
+    justify-content: space-around;
+        span{
+            bottom: 15px;
+        //     position: absolute;
+        //     width: 160px;
+        //     height: 50px;
+        //     background-color: @colorPrimary;
+        }
+    }
+
+    .results{
+        display: flex;
+        justify-content:space-evenly;
+        .result{
+            background-color: @colorButtons;
+            border-radius: 30px;
+            width: 100px;
+            padding: 1px 12px 1px 12px;
+        }
+    }
+}
+
+
+.containerB{
+    grid-area: containerB;
+    .calculator{
+        display: grid;
+        background-color: @colorButtons;
+        @button();
+        height: 300px;
+        gap: 2px;
+        .title{
+            display: flex;
+            margin-bottom: -20px;
+            h1{
+                color: @colortxt;
+                font-size: 1.4rem;
+            }  
+        }
+        .price , .result{
+            border-radius: 30px;
+            background-color: @colortxt;
+            padding: 5px 0 5px 0;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .button1{
+            margin-left: 30px;
+            margin-right: 30px;
+            border-radius: 30px;
+            background-color: @colorPrimary;
+        }
+
+    }
+    .button2{
+        @button();
+        margin-top: 20px;
+        padding: 10px 90px 10px 90px;
+        background-color: @colorPrimary;
+    }
+
+}
+
+.containerC{
+    grid-area: containerC;
+    display: flex;
+    width: 880px;
+    justify-content:space-between;
+    @media @desktop{
+        width: 1700px;
+    }
+    .message{
+        width: 500px;
+        color: @colortxt;
+        text-align: center;
+        @media @desktop{
+            width: 1700px;
+            text-align: left;
+        }
+    }
+    .coljuegos{
+        @media @desktop{
+            display:flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+

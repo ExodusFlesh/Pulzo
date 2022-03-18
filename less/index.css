@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background: url("https://d2yoo3qu6vrk5d.cloudfront.net/pulzo-lite/jsons/rushbet/native/BG-DESKTOP.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-decoration: none;
+}
+.dark {
+  color: #022248;
+}
+.light {
+  color: white;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 5px;
+}
+.containerA {
+  min-width: 600px;
+  color: white;
+  background-color: rgba(0, 255, 255, 0.418);
+}
+.banner-rushbet {
+  text-align: left;
+  margin-left: 2rem;
+}
+.teams {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  z-index: 1;
+}
+span {
+  background-color: #FCC307;
+  height: 80px;
+  width: 250px;
+  position: absolute;
+  z-index: 4;
+}
+.containerB {
+  background-color: rgba(0, 255, 255, 0.377);
+  min-width: 500px;
+}
+.containerC {
+  background-color: rgba(0, 255, 255, 0.342);
+}
+button {
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #FCC307;
+  border: none;
+}

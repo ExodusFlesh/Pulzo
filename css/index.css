@@ -1,0 +1,141 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  background: url("https://d2yoo3qu6vrk5d.cloudfront.net/pulzo-lite/jsons/rushbet/native/BG-DESKTOP.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-decoration: none;
+}
+.container {
+  display: grid;
+  grid-gap: 20px;
+  width: 90%;
+  text-align: center;
+  margin: 20px auto;
+  grid-template-columns: 400px;
+  grid-template-areas: "containerA " "containerB" "containerC";
+}
+@media only screen and (min-width: 760px) and (max-width: 975px) {
+  .container {
+    justify-content: space-evenly;
+    grid-template-columns: 450px 400px;
+    grid-template-areas: "containerA containerB" "containerC containerC";
+  }
+}
+@media only screen and (min-width: 975px) and (max-width: 4000px) {
+  .container {
+    justify-content: space-between;
+    grid-template-columns: 450px 400px 28rem;
+    grid-template-areas: "containerA containerB" "containerC containerC";
+  }
+}
+.containerA {
+  grid-area: containerA;
+}
+.containerA .banner-rushbet {
+  text-align: left;
+  margin-left: 2rem;
+}
+.containerA h1 {
+  color: #022248;
+}
+.containerA h2,
+.containerA h5 {
+  color: white;
+}
+.containerA .teams {
+  display: flex;
+  justify-content: space-around;
+}
+.containerA .teams span {
+  bottom: 15px;
+}
+.containerA .results {
+  display: flex;
+  justify-content: space-evenly;
+}
+.containerA .results .result {
+  background-color: #022248;
+  border-radius: 30px;
+  width: 100px;
+  padding: 1px 12px 1px 12px;
+}
+.containerB {
+  grid-area: containerB;
+}
+.containerB .calculator {
+  display: grid;
+  background-color: #022248;
+  padding: 15px 50px 25px 50px;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  height: 300px;
+  gap: 2px;
+}
+.containerB .calculator .title {
+  display: flex;
+  margin-bottom: -20px;
+}
+.containerB .calculator .title h1 {
+  color: white;
+  font-size: 1.4rem;
+}
+.containerB .calculator .price,
+.containerB .calculator .result {
+  border-radius: 30px;
+  background-color: white;
+  padding: 5px 0 5px 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.containerB .calculator .button1 {
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 30px;
+  background-color: #e6b822;
+}
+.containerB .button2 {
+  padding: 15px 50px 25px 50px;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  margin-top: 20px;
+  padding: 10px 90px 10px 90px;
+  background-color: #e6b822;
+}
+.containerC {
+  grid-area: containerC;
+  display: flex;
+  width: 880px;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 975px) and (max-width: 4000px) {
+  .containerC {
+    width: 1700px;
+  }
+}
+.containerC .message {
+  width: 500px;
+  color: white;
+  text-align: center;
+}
+@media only screen and (min-width: 975px) and (max-width: 4000px) {
+  .containerC .message {
+    width: 1700px;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 975px) and (max-width: 4000px) {
+  .containerC .coljuegos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
