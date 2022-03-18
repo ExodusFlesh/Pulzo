@@ -3,9 +3,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
-body {
+* body {
   background: url("https://d2yoo3qu6vrk5d.cloudfront.net/pulzo-lite/jsons/rushbet/native/BG-DESKTOP.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,8 +12,8 @@ body {
 }
 .container {
   display: grid;
-  grid-gap: 20px;
-  width: 90%;
+  grid-gap: 30px;
+  width: 80%;
   text-align: center;
   margin: 20px auto;
   grid-template-columns: 400px;
@@ -53,7 +52,10 @@ body {
   justify-content: space-around;
 }
 .containerA .teams span {
-  bottom: 15px;
+  position: absolute;
+  width: 160px;
+  height: 50px;
+  background-color: #e6b822;
 }
 .containerA .results {
   display: flex;
@@ -114,7 +116,7 @@ body {
 .containerC {
   grid-area: containerC;
   display: flex;
-  width: 880px;
+  width: auto;
   justify-content: space-between;
 }
 @media only screen and (min-width: 975px) and (max-width: 4000px) {

@@ -8,7 +8,7 @@
 @colorButtons: #022248;
 @colorPrimary: #e6b822;
 @fontWeight: bold;
-@dark: black;
+@dark: rgb(0, 0, 0);
 
 // fonts
 
@@ -30,26 +30,23 @@
     border: none;
 }
 
-
-
 *{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow:hidden;
-} body {
-    background: url("@{images}/BG-DESKTOP.jpg");
-    background-repeat: no-repeat;
-    background-size:cover; 
-    text-decoration: none;
-}
-
+    body {
+        background: url("@{images}/BG-DESKTOP.jpg");
+        background-repeat: no-repeat;
+        background-size:cover; 
+        text-decoration: none;
+    }
+} 
 
 .container{
     display: grid;
-    grid-gap:20px;
-    width: 90%;
+    grid-gap:30px;
+    width: 80%;
     text-align: center;
     margin: 20px auto;
     grid-template-columns: 400px;
@@ -92,11 +89,10 @@
     display: flex;
     justify-content: space-around;
         span{
-            bottom: 15px;
-        //     position: absolute;
-        //     width: 160px;
-        //     height: 50px;
-        //     background-color: @colorPrimary;
+            position: absolute;
+            width: 160px;
+            height: 50px;
+            background-color: @colorPrimary;
         }
     }
 
@@ -156,7 +152,7 @@
 .containerC{
     grid-area: containerC;
     display: flex;
-    width: 880px;
+    width: auto;
     justify-content:space-between;
     @media @desktop{
         width: 1700px;
@@ -174,6 +170,7 @@
         @media @desktop{
             display:flex;
             flex-wrap: wrap;
+
         }
     }
 }
