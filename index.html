@@ -12,26 +12,47 @@
 <body>
     <div class="container">
         <!-- ContainerA -->
-        <div class="containerA">         
+        <div class="containerA">
             <div class="banner-rushbet">
                 <img id="logo" height="70rem" src="/images/rushbet.png">
             </div>
             <h1> Elige al ganador</h1>
             <div class="teams">
-                <img class="team" height="180rem"
+                <div class="argentina">
+                    <input type="radio" name="rad" value="argentina">
+                    <label for="arg">
+                        <img class="check" height="50rem" src="https://d2yoo3qu6vrk5d.cloudfront.net/pulzo-lite/jsons/rushbet/native/Check.png">
+                    </label>
+                    <img class="team" height="180rem"
                     src="https://filesstaticpulzo.s3-us-west-2.amazonaws.com/pulzo-lite/jsons/rushbet/native/images/1000000153.png">
-                <img class="team" height="180rem"
+                </div>
+                    <div class="lanyard">
+                        <span>VS</span>
+                    </div>
+                <div class=brazil>
+                    <input type="radio" name="rad" value="brazil">
+                    <label for="brz"> 
+                        <img class="check" height="50rem" src="https://d2yoo3qu6vrk5d.cloudfront.net/pulzo-lite/jsons/rushbet/native/Check.png">
+                    </label>
+                    <img class="team" height="180rem"
                     src="https://filesstaticpulzo.s3-us-west-2.amazonaws.com/pulzo-lite/jsons/rushbet/native/images/1000003189.png">
+                </div>
             </div>
-            <h2>EMPATE</h2>
+            <div class="empate">
+                <h2>EMPATE</h2>
+                <input type="radio" name="rad" value="empate">
+                    <label for="empate"> 
+                        <img class="check" height="50rem" src="https://d2yoo3qu6vrk5d.cloudfront.net/pulzo-lite/jsons/rushbet/native/Check.png">
+                    </label>
+            </div>
             <div class="results">
-                <h2 class="result">0</h2>
-                <h2 class="result">0</h2>
-                <h2 class="result">0</h2>
+                <h2 class="result" id="var1">0</h2>
+                <h2 class="result" id="var2">0</h2>
+                <h2 class="result" id="var3">0</h2>
             </div>
             <h5>*Las cuotas están sujetas a cambios</h5>
         </div>
-         <!-- ContainerB -->
+        <!-- ContainerB -->
         <div class="containerB">
             <div class="calculator">
                 <div class="title">
@@ -40,16 +61,13 @@
                             src="https://d2yoo3qu6vrk5d.cloudfront.net/pulzo-lite/jsons/rushbet/native/refresh.png">
                     </h1>
                 </div>
-                <h1 class="price">$__________</h1>
+                <textarea class="price" placeholder="$ ____________"></textarea>
                 <button class="button1">CALCULAR</button>
                 <h1 class="result">GANAS</h1>
             </div>
-            <form action="https://www.rushbet.co/?page=sportsbook#event/1007806226">
-                <button class="button2" href="https://www.rushbet.co/?page=sportsbook#event/1007806226"> APUESTE
-                    AHORA</button>
-            </form>
-        </div>
-         <!-- ContainerC -->
+                <button class="button2" > APUESTE AHORA</button>
+            </div>
+        <!-- ContainerC -->
         <div class="containerC">
             <div class="message">
                 <p>Jugar sin control causa adicción* Jugar legal es apostar a la salud el juegop es entretenimento,
@@ -61,6 +79,7 @@
             </div>
         </div>
     </div>
+    <script src="/main.js" type="text/javascript"></script>
 </body>
 
 </html>

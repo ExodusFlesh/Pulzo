@@ -4,11 +4,21 @@
   margin: 0;
   padding: 0;
 }
-* body {
-  background: url("https://d2yoo3qu6vrk5d.cloudfront.net/pulzo-lite/jsons/rushbet/native/BG-DESKTOP.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-decoration: none;
+@media only screen and (min-width: 975px) and (max-width: 4000px) {
+  * body {
+    background: url("https://d2yoo3qu6vrk5d.cloudfront.net/pulzo-lite/jsons/rushbet/native/BG-DESKTOP.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-decoration: none;
+  }
+}
+@media (max-width: 767px), only screen and (min-width: 760px) and (max-width: 975px) {
+  * body {
+    background: url("https://d2yoo3qu6vrk5d.cloudfront.net/pulzo-lite/jsons/rushbet/native/BG-MOBILE.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-decoration: none;
+  }
 }
 .container {
   display: grid;
@@ -43,23 +53,73 @@
 .containerA h1 {
   color: #022248;
 }
+@media only screen and (min-width: 975px) and (max-width: 4000px) {
+  .containerA h1 {
+    color: #ffffff;
+  }
+}
 .containerA h2,
 .containerA h5 {
-  color: white;
+  color: #ffffff;
+}
+.containerA input {
+  z-index: 3;
+  position: absolute;
+  margin-top: 17px;
+  margin-left: 28px;
+  margin-bottom: 15px;
+}
+.containerA label {
+  display: flex;
+}
+.containerA label .check {
+  position: absolute;
+  z-index: 2;
+}
+.containerA .empate {
+  display: flex;
+  justify-content: center;
+}
+.containerA .empate .check {
+  position: relative;
+  margin-top: -10px;
+  margin-left: 12px;
+  margin-bottom: 15px;
+}
+.containerA .empate input {
+  margin-left: 110px;
 }
 .containerA .teams {
   display: flex;
   justify-content: space-around;
 }
-.containerA .teams span {
+.containerA .teams .check {
+  margin-left: 100px;
+}
+.containerA .teams .team {
+  position: relative;
+  z-index: 1;
+}
+.containerA .teams .lanyard {
   position: absolute;
-  width: 160px;
-  height: 50px;
+  margin-top: 60px;
+  width: 200px;
+  height: 65px;
   background-color: #e6b822;
+}
+.containerA .teams .lanyard span {
+  display: grid;
+  margin-top: 20px;
+  width: 200px;
+  color: #022248;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 .containerA .results {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 15px;
 }
 .containerA .results .result {
   background-color: #022248;
@@ -81,21 +141,27 @@
   height: 300px;
   gap: 2px;
 }
+.containerB .calculator :hover {
+  background-color: #413204;
+}
 .containerB .calculator .title {
   display: flex;
   margin-bottom: -20px;
 }
 .containerB .calculator .title h1 {
-  color: white;
+  color: #ffffff;
   font-size: 1.4rem;
 }
 .containerB .calculator .price,
 .containerB .calculator .result {
   border-radius: 30px;
-  background-color: white;
+  background-color: #ffffff;
   padding: 5px 0 5px 0;
   margin-top: auto;
   margin-bottom: auto;
+}
+.containerB .calculator .price {
+  text-align: center;
 }
 .containerB .calculator .button1 {
   margin-left: 30px;
@@ -113,6 +179,9 @@
   padding: 10px 90px 10px 90px;
   background-color: #e6b822;
 }
+.containerB .button2 :hover {
+  background-color: #413204;
+}
 .containerC {
   grid-area: containerC;
   display: flex;
@@ -121,23 +190,26 @@
 }
 @media only screen and (min-width: 975px) and (max-width: 4000px) {
   .containerC {
-    width: 1700px;
+    width: 1650px;
   }
 }
 .containerC .message {
+  display: flex;
   width: 500px;
-  color: white;
+  color: #ffffff;
   text-align: center;
+  font-weight: bold;
 }
 @media only screen and (min-width: 975px) and (max-width: 4000px) {
   .containerC .message {
-    width: 1700px;
+    display: inline;
+    margin-top: 45px;
+    width: auto;
     text-align: left;
   }
 }
 @media only screen and (min-width: 975px) and (max-width: 4000px) {
   .containerC .coljuegos {
     display: flex;
-    flex-wrap: wrap;
   }
 }
